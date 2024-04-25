@@ -124,7 +124,7 @@ int cmd_run (char *args[]) {
 
         case 0: // код потомка
             execvp(args[0], args); // дублирование действия оболочки
-            perror("execvp");
+            perror("execvp (failed launch function)");
             exit(EXIT_FAILURE);
 
         default: // код родительского процесса
